@@ -1,0 +1,326 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
+dl, dt, dd, ul, ol, li, 
+pre, 
+fieldset, lengend, button, form, input, textarea, 
+th, td { 
+    margin: 0;
+    padding: 0;
+}
+em,var,i{
+	font-style: normal;
+}
+strong,h1,h2,h3,h4,h5,h6,var,b{
+	font-weight: normal;
+}
+a,u{
+	text-decoration: none;
+}
+input[type="text"],input[type="password"],textarea,select,button{
+	font-size: 1rem;
+	-webkit-appearance: none;
+	resize: none;
+	-webkit-user-select: text;
+}
+input{
+	font-family: Microsoft YaHei,SimSun,Arial;
+	border:0;
+	outline:none;
+}
+li{
+	list-style: none;
+}
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html{
+	max-width:640px;
+	margin:0 auto;
+}
+body{
+	font-family: Arial,Microsoft YaHei,SimSun;
+    line-height: 1.4;
+    color: #000;
+    background-color: #f2f2f2;
+}
+img{
+	width: 100%;
+	border:0;
+}
+*{
+	box-sizing: border-box;
+	-webkit-user-select:none;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-webkit-touch-callout: none;
+}
+.loading{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    z-index: 99999;
+    top:0;
+}
+/* placeholder="" */
+
+/*header*/
+header{
+	top: 0;
+	text-align: center;
+	color:#fff;
+	width: 100%;
+	max-width: 640px;
+	height: 3rem;
+	position: fixed;
+	background: #ff5722;
+}
+header h3{
+	font-size: 1.1rem;
+	line-height: 3rem;
+}
+header a{
+	display: block;
+	width: 3rem;
+	height: 3rem;
+	font-size: 0.9rem;
+	line-height: 3rem;
+	position: absolute;
+	text-align: center;
+	color:#fff;
+	top: 0;
+}
+header a:active{
+	opacity: 0.7;
+}
+header a.top_fh{
+	background: url(../images/ico_fhbutton.png) no-repeat center center;
+	background-size: 1.6rem;
+}
+header a.top_add{
+	font-size: 2rem;
+	right:0;
+}
+header .top_bj{
+	left: 0;
+}
+footer{
+	position: fixed;
+	z-index: 9;
+	width: 100%;
+	max-width: 640px;
+	bottom:0;
+	background: #fff;
+	overflow: hidden;
+	border-top:1px solid #f0f0f0;
+}
+footer a{
+	width: 50%;
+	float: left;
+	text-align: center;
+	display: block;
+	color:#666666;
+	padding-top: 1.8rem;
+	font-size: 0.9rem;
+	height: 3rem;
+}
+footer a:active{
+	opacity: 0.8;
+}
+footer a.cur{
+	color:#ff5722;
+}
+footer a:nth-child(1){
+	background: url(../images/ico_footertb1.png) no-repeat center 0.2rem;
+	background-size: 1.5rem;
+}
+footer a:nth-child(2){
+	background: url(../images/ico_footertb2.png) no-repeat center 0.2rem;
+	background-size: 1.5rem;
+}
+footer a:nth-child(1).cur{
+	background: url(../images/ico_footertb1cur.png) no-repeat center 0.2rem;
+	background-size: 1.5rem;
+}
+footer a:nth-child(2).cur{
+	background: url(../images/ico_footertb2cur.png) no-repeat center 0.2rem;
+	background-size: 1.5rem;
+}
+.page{
+	padding-top: 3rem;
+}
+
+.xf_hasftrpage{
+	padding-bottom: 3.5rem;
+}
+.xf_pageslider{
+	height: 100%;
+	overflow: auto;
+}
+/*loading */
+.xf_loading{
+	width: 100%;
+	display: none;
+	height: 100%;
+	max-width: 640px;
+	position: fixed;
+	top:0;
+	background: rgba(0,0,0,0.4);
+}
+.xf_loadinginner{
+	position: absolute;
+	width: 50%;
+	left: 25%;
+	padding-top: 1.5rem;
+	top: 50%;
+	margin-top: -4rem;
+	height: 8rem;
+	background: #fff;
+	color:#585757;
+	text-align: center;
+	border-radius: 0.3rem;
+}
+.xf_loadinginner i{
+	display: block;
+	padding-bottom: 1rem;
+}
+.xf_loadinginner i img{
+	width: 3rem;
+	height: 3rem;
+}
+/*loading end*/
+
+/*登录*/
+.xf_loginbox{
+	padding-top: 1.5rem;
+}
+.xf_logininner p{
+	position: relative;
+	background: #fff;
+	padding: 0.5rem 0;
+	border-bottom: 1px solid #e6e6e6;
+	overflow: hidden;
+}
+.xf_logininner p a{
+	display: inline-block;
+	position: absolute;
+	right: 0.5rem;
+	top: 1rem;
+	color:#ff5722;
+	padding: 0 0.5rem;
+	border-radius: 0.3rem;
+	line-height: 2rem;
+	border:1px solid #d2d2d2;
+}
+.xf_logininner p a:active{
+	opacity: 0.6;
+}
+.xf_logininner p span{
+	display: inline-block;
+	width: 20%;
+	color:#333333;
+	line-height: 3rem;
+	text-align: center;
+}
+.xf_logininner p input{
+	width: 80%;
+	height: 3rem;
+}
+.xf_tybutton{
+	padding: 1rem;
+}
+.xf_tybutton a{
+	width: 100%;
+	font-size: 1rem;
+	border:0;
+	display: block;
+	line-height: 3rem;
+	text-align: center;
+	color:#fff;
+	background: #ff5722;
+	border-radius: 0.2rem;
+}
+.xf_tybutton a:active{
+	opacity: 0.8;
+}
+.xf_loginqt{
+	padding: 0.5rem 1rem;
+	overflow: hidden;
+}
+.xf_loginqt a{
+	float: left;
+	color:#666666;
+}
+.xf_loginqt a:nth-child(2){
+	color:#ff5722;
+	float: right;
+}
+/*登录 end*/
+
+/*注册*/
+.xf_zhucebox{
+	padding-top: 0.8rem;
+}
+/*注册 end*/
+
+/*我的*/
+#my_page{
+	padding-top: 0;
+}
+.xf_mytop{
+    padding: 0.7rem 0;
+    text-align: center;
+    color: #fff;
+    line-height: 1.6rem;
+    background: #ff5722;
+}
+.xf_mytop img{
+	border-radius: 50%;
+	height: 4.5rem;
+	width: 4.5rem;
+}
+.xf_myinner ul{
+	padding-top: 0.8rem;
+}
+.xf_myinner ul li{
+	background: #fff;
+	padding-left: 3.5rem;
+}
+.xf_myinner ul li a{
+	color:#333;
+	line-height: 3.5rem;
+	display: block;
+	border-bottom: 1px solid #dddddd;
+	background: url(../images/ico_yjt.png) no-repeat 95% center;
+	background-size: 1rem;
+}
+.xf_myinner ul li:last-child a{
+	border: 0;
+}
+.xf_myinner ul:nth-child(1) li:nth-child(1) {
+	background: url(../images/ico_myzl.png) #fff no-repeat 0.8rem center;
+	background-size: 1.6rem;
+}
+.xf_myinner ul:nth-child(2) li:nth-child(1) {
+	background: url(../images/ico_myxx.png) #fff no-repeat 0.8rem center;
+	background-size: 1.6rem;
+}
+.xf_myinner ul:nth-child(2) li:nth-child(2) {
+	background: url(../images/ico_myqy.png) #fff no-repeat 0.8rem center;
+	background-size: 1.6rem;
+}
+.xf_myinner ul li:active{
+	background-color: #eee !important;
+}
+
+/*planlist*/
+.uers_plan{
+
+}
+.no_plan{
+	line-height: 1.8;
+	text-align: center;
+	font-size: 1.1rem;
+	opacity: 0.3;
+	padding-top: 6rem;
+}
+/*planlist end*/
