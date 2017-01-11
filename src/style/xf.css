@@ -13,15 +13,14 @@ strong,h1,h2,h3,h4,h5,h6,var,b{
 	font-weight: normal;
 }
 a,u{
+	color: #333;
 	text-decoration: none;
 }
-input[type="text"],input[type="password"],textarea,select,button{
+input,textarea,select,button{
 	font-size: 1rem;
 	-webkit-appearance: none;
 	resize: none;
 	-webkit-user-select: text;
-}
-input{
 	font-family: Microsoft YaHei,SimSun,Arial;
 	border:0;
 	outline:none;
@@ -36,12 +35,16 @@ table{
 html{
 	max-width:640px;
 	margin:0 auto;
+	-ms-touch-action: manipulation;
+    touch-action: manipulation;
 }
 body{
 	font-family: Arial,Microsoft YaHei,SimSun;
     line-height: 1.4;
     color: #000;
     background-color: #f2f2f2;
+    width: 100%;
+    overflow: hidden;
 }
 img{
 	width: 100%;
@@ -82,7 +85,7 @@ header a{
 	display: block;
 	width: 3rem;
 	height: 3rem;
-	font-size: 0.9rem;
+	font-size: 1rem;
 	line-height: 3rem;
 	position: absolute;
 	text-align: center;
@@ -98,6 +101,9 @@ header a.top_fh{
 }
 header a.top_add{
 	font-size: 2rem;
+	right:0;
+}
+header a.top_rfont{
 	right:0;
 }
 header .top_bj{
@@ -146,7 +152,21 @@ footer a:nth-child(2).cur{
 	background-size: 1.5rem;
 }
 .page{
+	max-width: 640px;
 	padding-top: 3rem;
+	min-height: 100%;
+    background-color: #f2f2f2;
+}
+.loading{
+	color:#fff;
+	text-align: center;
+	background: #000;
+	position: absolute;
+	max-width: 640px;
+	z-index: 99;
+	top: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .xf_hasftrpage{
@@ -239,6 +259,9 @@ footer a:nth-child(2).cur{
 	background: #ff5722;
 	border-radius: 0.2rem;
 }
+.logout a{
+	background: #bababa;
+}
 .xf_tybutton a:active{
 	opacity: 0.8;
 }
@@ -316,6 +339,79 @@ footer a:nth-child(2).cur{
 .uers_plan{
 
 }
+.uers_plan ul{
+	padding: 0 1rem;
+}
+.uers_plan ul li{
+	margin-top: 1rem;
+	position: relative;
+	overflow: hidden;
+}
+.uers_plan ul li div{
+	background: #fff;
+	line-height: 1.6;
+	position: relative;
+	z-index: 2;
+	left: 3.5rem;
+	padding: 0.5rem 0.5rem 0.5rem 4rem;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+}
+.uers_plan.remove ul li div{
+	left: -3rem;
+}
+.uers_plan ul li div b{
+	position: absolute;
+	left: 1rem;
+	top: 1rem;
+	width: 2rem;
+	height: 2rem;
+	line-height: 2.1rem;
+	font-size: 1.2rem;
+	border-radius: 50%;
+	background: #ff5722;
+	color:#fff;
+	text-align: center;
+}
+.uers_plan ul li .ico_ok{
+    position: absolute;
+    left: -3.5rem;
+    top: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    background: #bdbdbd;
+    color: #fff;
+    text-align: center;
+}
+.uers_plan ul li .ico_remove{
+	position: absolute;
+	right: 0.2rem;
+	top: 1rem;
+	width: 2rem;
+	height: 2rem;
+	line-height: 2.1rem;
+	font-size: 1.2rem;
+	border-radius: 50%;
+	z-index: 1;
+	background: #ff5722;
+	color:#fff;
+	text-align: center;
+}
+.uers_plan ul li .ico_remove:active{
+	opacity: 0.8;
+}
+.uers_plan ul li em{
+	display: block;
+	font-size: 1.1rem;
+	color:#333;
+}
+.uers_plan ul li p{
+	font-size: 0.8rem;
+	color:#aaa;
+}
 .no_plan{
 	line-height: 1.8;
 	text-align: center;
@@ -324,3 +420,88 @@ footer a:nth-child(2).cur{
 	padding-top: 6rem;
 }
 /*planlist end*/
+
+/*my data*/
+.my_data ul{
+	margin-top: 1rem;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+.my_data ul li{
+	padding-left: 1rem;
+	background: #fff;
+}
+.my_data ul li:active{
+	background: #eee;
+}
+.my_data ul li:last-child a{
+	border-bottom: 0;
+}
+.my_data ul li a{
+	display: block;
+	padding: 0.5rem 1.5rem 0.5rem 0;
+	line-height: 2rem;
+	overflow: hidden;
+	border-bottom: 1px solid #eee;
+	background: url(../images/ico_yjt.png) no-repeat 99% center;
+	background-size: 1rem;
+}
+.my_data ul li a span{
+	display: inline-block;
+	width: 30%;
+	float: left;
+}
+.my_data ul li a img{
+	float: right;
+	width: 2rem;
+	height: 2rem;
+}
+.my_data ul li a i{
+	font-size: 0.95rem;
+	text-align: right;
+	color:#868686;
+	display: block;
+	width: 70%;
+	float: right;
+}
+/*my data end*/
+
+
+/*addplan*/
+.add_plan ul{
+	margin-top: 1rem;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+.add_plan ul li{
+	padding-left: 1rem;
+	background: #fff;
+}
+.add_plan ul li:last-child a{
+	border-bottom: 0;
+}
+.add_plan ul li div{
+	display: block;
+	padding: 0.5rem 1.5rem 0.5rem 0;
+	line-height: 2.5rem;
+	overflow: hidden;
+	border-bottom: 1px solid #eee;
+}
+.add_plan ul li div span{
+	display: inline-block;
+	width: 30%;
+	float: left;
+}
+.add_plan ul li div input,.add_plan ul li div select{
+	color:#868686;
+	height: 2.5rem;
+	display: block;
+	width: 70%;
+	float: right;
+}
+.add_plan ul li div select{
+	background: url(../images/ico_xjt.png) no-repeat 95% center;
+	background-size: 1rem;
+}
+
+/*addplan end*/
