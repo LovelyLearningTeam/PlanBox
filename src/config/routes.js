@@ -10,7 +10,6 @@ import useradd from '../page/user/addplan.vue'
 import userdata from '../page/user/mydata.vue'
 import userhistory from '../page/user/history.vue'
 import userchart from '../page/user/chart.vue'
-import plan_state from '../page/user/plan_state.vue'
 // 配置路由
 export default [
   {
@@ -30,7 +29,6 @@ export default [
       {path: 'addplan',component: useradd},
       {path: 'mydata',component: userdata},
       {path: 'history',component: userhistory},
-      {path: 'plan_state',component: plan_state},
       {path: 'chart',component: userchart}
     ],
   },
